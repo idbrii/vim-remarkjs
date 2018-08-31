@@ -1,15 +1,16 @@
 # vim-remarkjs
-Generate slideshows from markdown with [remark.js](https://github.com/gnab/remark).
+Write slideshows in markdown and export as self-contained html pages.
 
-A simple plugin that provides a `:RemarkPreview` command to generate html that displays as a nice slideshow in your browser.
+This plugin provides a `:RemarkPreview` command to generate html.
+The html imports [remark.js](https://github.com/gnab/remark) which does all the hard work of displaying a slideshow featuring dual displays and presenter mode with notes.
 
-If [vim gogo](https://github.com/idbrii/vim-gogo) is installed, `:RemarkPreview` launches the html in your browser.
+If [vim-gogo](https://github.com/idbrii/vim-gogo) is installed, `:RemarkPreview` launches the html in your browser. Otherwise, the file path is on your clipboard.
 
-vim-remarkjs provides an [ultisnips](https://github.com/SirVer/ultisnips) snippet `slide` to create a slide.
+vim-remarkjs also provides an [ultisnips](https://github.com/SirVer/ultisnips) snippet `slide` to create a slide.
 
 # Slide Syntax
 
-Write markdown ([with some additions](https://github.com/gnab/remark/wiki)) for each slide.
+Remark.js uses [slightly augmented markdown](https://github.com/gnab/remark/wiki) for each slide.
 Separate slides with `---`:
 
     # Working with remarkjs
