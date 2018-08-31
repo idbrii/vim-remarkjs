@@ -1,7 +1,7 @@
 " Generate slideshows with remark.js
 " https://github.com/gnab/remark
 
-let s:template = expand('<sfile>:h') .'/remark_template.html'
+let s:template = expand('<sfile>:h:h') .'/assets/remark_template.html'
 
 function! remarkjs#build(file_name)
     exec 'edit '. a:file_name .'.html'
