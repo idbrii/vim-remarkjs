@@ -10,6 +10,11 @@ function! remarkjs#build(file_name)
     exec insert_point .'delete _'
     exec insert_point .'read '. a:file_name
     write
-    exec 'Gogo '. expand("%")
+    if exists(":Gogo") == 2
+      exec 'Gogo '. expand("%")
+    else
+      let @+ = expand("%:p")
+      echo 'Exported html and put filepath on clipboard: '. expand("%")
+    endif
     edit #
 endf
