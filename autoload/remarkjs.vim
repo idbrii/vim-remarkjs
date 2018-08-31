@@ -5,6 +5,7 @@ let s:template = expand('<sfile>:h:h') .'/assets/remark_template.html'
 
 function! remarkjs#build(file_name)
     exec 'edit '. a:file_name .'.html'
+    1,$ delete _
     exec 'keepalt read '. s:template
     let insert_point = search('REPLACE_ME')
     exec insert_point .'delete _'
