@@ -4,7 +4,7 @@ Write slideshows in markdown and export as self-contained html pages.
 This plugin provides a `:RemarkPreview` command to generate html.
 The html imports [remark.js](https://github.com/gnab/remark) which does all the hard work of displaying a slideshow featuring dual displays and presenter mode with notes.
 
-If [vim-gogo](https://github.com/idbrii/vim-gogo) is installed, `:RemarkPreview` launches the html in your browser. Otherwise, the file path is on your clipboard.
+If [vim-gogo](https://github.com/idbrii/vim-gogo) or [open-browser.vim](https://github.com/tyru/open-browser.vim) is installed, `:RemarkPreview` launches the html in your browser. Otherwise, the file path is on your clipboard.
 
 vim-remarkjs also provides an [ultisnips](https://github.com/SirVer/ultisnips) snippet `slide` to create a slide.
 
