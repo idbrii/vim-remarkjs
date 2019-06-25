@@ -16,6 +16,8 @@ function! remarkjs#build(file_name)
     if !g:remarkjs_do_nothing_on_build
         if exists(":Gogo") == 2
             exec 'Gogo '. expand("%")
+        elseif exists(":OpenBrowser") == 2
+            exec 'OpenBrowser '. expand("%")
         else
             let @+ = expand("%:p")
             let @" = @+
