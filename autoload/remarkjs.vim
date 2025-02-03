@@ -9,6 +9,9 @@ function! remarkjs#build(file_name)
     silent exec 'edit '. a:file_name .'.html'
     silent 1,$ delete _
     silent exec 'keepalt read '. s:template
+    let insert_point = search('REPLACE_TITLE')
+    silent exec insert_point .'delete _'
+    call append(insert_point-1, fnamemodify(a:file_name, ":p:t:r"))
     let insert_point = search('REPLACE_ME')
     silent exec insert_point .'delete _'
     silent exec insert_point .'read '. a:file_name
